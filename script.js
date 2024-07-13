@@ -83,7 +83,10 @@ for (let todo of todoList) {
 function onAddTodo() {
   let userInputElement = document.getElementById("todoUserInput");
   let userInputValue = userInputElement.value;
-
+  if (userInputValue === "") {
+    alert("Enter Valid Text");
+    return;
+  }
   let newTodo = {
     text : userInputValue,
     uniqueNo: todoList.length
